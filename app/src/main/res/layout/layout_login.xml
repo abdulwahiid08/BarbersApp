@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_width="140dp"
+        android:layout_height="130dp"
+        android:src="@drawable/tampilan_ui"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#CD000000"
+        android:layout_below="@id/ivLogo"/>
+
+    <TextView
+        android:id="@+id/tvKet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please"
+        android:textAlignment="center"
+        android:layout_below="@id/tvWelcome" />
+
+    <TextView
+        android:id="@+id/icUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_below="@id/tvKet"
+        app:drawableStartCompat="@drawable/ic_baseline_person_outline_24" />
+
+    <EditText
+        android:layout_marginStart="2dp"
+        android:id="@+id/etUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tvKet"
+        android:layout_toEndOf="@id/icUser"/>
+
+    <TextView
+        android:id="@+id/tvLockpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etUser"
+        android:layout_marginTop="26dp"
+        app:drawableStartCompat="@drawable/ic_baseline_lock" />
+
+    <EditText
+        android:drawableEnd="@drawable/ic_passshow"
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/etUser"
+        android:layout_toEndOf="@id/tvLockpass"
+        android:layout_marginStart="2dp"/>
+
+    <TextView
+        android:id="@+id/tvForgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:textAlignment="textEnd"
+        android:layout_below="@id/etPassword"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnLogin"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_below="@id/tvForgot"
+        android:backgroundTint="#D1613E"/>
+
+    <TextView
+        android:id="@+id/tvLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/garis1"
+        android:textColor="@color/black"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="35dp"/>
+
+    <TextView
+        android:id="@+id/tvBio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/biometric"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="#DA000000"
+        android:layout_below="@id/btnLogin"/>
+
+    <TextView
+        android:id="@+id/tvLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/garis2"
+        android:textColor="@color/black"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="35dp"/>
+
+    <ImageView
+        android:id="@+id/ivFinger"
+        android:src="@drawable/ic_baseline_fingerprint2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBio"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="35dp"/>
+
+    <TextView
+        android:id="@+id/tvAsk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/akun"
+        android:textSize="16sp"
+        android:layout_below="@id/ivFinger"
+        android:layout_marginStart="72dp"/>
+
+    <TextView
+        android:id="@+id/tvCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:textSize="17sp"
+        android:textColor="#D5613D"
+        android:layout_below="@id/ivFinger"
+        android:layout_toEndOf="@id/tvAsk"
+        android:layout_marginStart="5dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/created"
+        android:layout_below="@id/tvCreate"
+        android:textAlignment="textEnd"
+        android:layout_marginTop="35dp"
+        android:textSize="10sp"/>
+
+</RelativeLayout>
